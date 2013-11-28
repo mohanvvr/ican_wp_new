@@ -1,5 +1,10 @@
+<?php
+/*
+Template Name: Home Page
+*/
+?>
 <?php get_header(); ?>
-zxccccccccccccccccccccccccc
+
 <div id="contentBk">
   <div class="bannerslider">
     <div id="homeSlider" class="clearfix flexslider">

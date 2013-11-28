@@ -4,9 +4,9 @@ include(TEMPLATEPATH . '/functions/widget_cat_posts.php');
 
 include(TEMPLATEPATH . '/functions/breadcrumb.php');
 
-include(TEMPLATEPATH . '/functions/gallery.php');
+//include(TEMPLATEPATH . '/functions/gallery.php');
 
-include(TEMPLATEPATH . '/functions/meta-box.php');
+//include(TEMPLATEPATH . '/functions/meta-box.php');
 
 //Some simple code for our widget-enabled sidebar
 
@@ -275,4 +275,37 @@ function socialmenu() { ?>
 
 </div>
 
-<?php } ?>
+<?php } 
+//add_theme_support('post-thumbnails');
+function create_post_type() {
+	register_post_type( 'ican_programs',
+		array(
+			'labels' => array(
+				'name' => __( 'Programs' ),
+				'singular_name' => __( 'Program' )
+			),
+		'public' => true,
+        'menu_position' => 5,
+        'rewrite' => array('slug' => 'programs'),
+		'supports' => array('title','editor','thumbnail')
+		)
+	);
+}
+
+add_action( 'init', 'create_post_type' );
+
+    /*function movie_taxonomy() {
+       register_taxonomy(
+        'movie_review',
+        'mysite_reviews',
+        array(
+            'label' => 'Movie Review',
+            'query_var' => true,
+            'rewrite' => array('slug' => 'movie-reviews')
+        )
+    );
+    }
+    
+    add_action('init', 'movie_taxonomy' );*/
+
+?>
