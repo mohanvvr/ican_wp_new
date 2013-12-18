@@ -24,12 +24,17 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/custom.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/main.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/img/favicon.png" />
 
 <!--[if lt IE 9]>
          <script src="<?php bloginfo('template_url');?>/js/html5shiv.js"></script>
         <![endif]-->
+
+<script type="text/javascript">
+
+</script>
 
 </head><body>
 
@@ -57,6 +62,7 @@
     </div>
   </div>
   <div>
+
     <div id="menu">
       <section> <a href="index.html"><img src="<?php bloginfo('template_url');?>/img/logo.png" alt=""></a>
 	  <?php 
@@ -65,10 +71,11 @@
       </section>
     </div>
     <div id="tagline" class="submenu">
-      <section>
+	   <section>
 		<?php 
+		if(is_page()){ ?><a href="#">“Book a Free Assessment Test<!-- <strong>Get Form</strong>--> ”</a><?php }else{
 	  $mainmenu=array( 'sort_column' => 'menu_order', 'container' => false ,'menu_class' => 'submenu-franchise', 'menu' => 'submenu' );	  
-	  wp_nav_menu($mainmenu); ?> 
+	  wp_nav_menu($mainmenu); }?> 
       </section>
     </div>
     <div id="info">

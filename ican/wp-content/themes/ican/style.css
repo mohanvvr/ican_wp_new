@@ -1347,6 +1347,7 @@ img.fwidth {
 .blog .box {
 	margin-bottom:40px;
 }
+.c-67 .box{ min-height: 340px;}
 .box {
 	border:1px solid #e8eaee;
 	color:#5D6F8D;
@@ -1357,7 +1358,7 @@ img.fwidth {
 	-moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
-}
+	 }
 .box h4 {
 	margin:0 15px 5px 15px;
 	font-weight:600;
@@ -2631,3 +2632,8 @@ a:not(.lb-next):not(.lb-prev), .archives li, .pgNr li, .grayColor .overlay, h5, 
 	text-transform:uppercase !important;
 
 }
+.email span,.wpcf7-validation-errors{ color: #FF0000;
+    float: right;
+    font-size: 12px;
+    width: 100%;}
+.wpcf7-validation-errors{font-size:14px;}
